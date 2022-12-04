@@ -1,0 +1,4 @@
+*configDB.*
+*__pycache__/
+.idea/*
+*.pyc

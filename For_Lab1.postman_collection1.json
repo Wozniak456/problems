@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "0b2338d2-a9c8-43fd-9c6e-acd8ceb72c03",
+		"name": "For_Lab1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23898623"
+	},
+	"item": [
+		{
+			"name": "List1",
+			"item": [
+				{
+					"name": "CategoryCollection",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"person\": [\r\n       {\r\n           \"id\": \"2\",\r\n           \"name\": \"Clothes\"\r\n       },\r\n       {\r\n           \"id\": \"3\",\r\n           \"name\": \"Vacation\"\r\n       },\r\n       {\r\n           \"id\": \"4\",\r\n           \"name\": \"Drinks\"\r\n       },\r\n       {\r\n           \"id\": \"5\",\r\n           \"name\": \"Alcohol\"\r\n       },\r\n       {\r\n           \"id\": \"6\",\r\n           \"name\": \"Drugs\"\r\n       }\r\n   ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LokalURL}}/category",
+							"host": [
+								"{{LokalURL}}"
+							],
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UsersCollection",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"person\": [\r\n       {\r\n           \"id\": \"2\",\r\n           \"name\": \"Kent\"\r\n       },\r\n       {\r\n           \"id\": \"3\",\r\n           \"name\": \"Bruce\"\r\n       },\r\n       {\r\n           \"id\": \"4\",\r\n           \"name\": \"Peter\"\r\n       },\r\n       {\r\n           \"id\": \"5\",\r\n           \"name\": \"Sofiia\"\r\n       },\r\n       {\r\n           \"id\": \"6\",\r\n           \"name\": \"Anna\"\r\n       }\r\n   ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LokalURL}}/user",
+							"host": [
+								"{{LokalURL}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RecordCollection",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"record\": [\r\n       {\r\n        \"id\": 2,\r\n        \"userID\": 2,\r\n        \"categoryID\": 2,\r\n        \"date\": \"18.09.2022 17:53\",\r\n        \"cost\": 150\r\n        },\r\n       {\r\n           \"id\": 3,\r\n        \"userID\": 3,\r\n        \"categoryID\": 4,\r\n        \"date\": \"18.08.2022 17:30\",\r\n        \"cost\": 150\r\n       },\r\n       {\r\n           \"id\": 4,\r\n        \"userID\": 2,\r\n        \"categoryID\": 3,\r\n        \"date\": \"18.10.2022 21:53\",\r\n        \"cost\": 150\r\n       },\r\n       {\r\n           \"id\": 5,\r\n        \"userID\": 2,\r\n        \"categoryID\": 4,\r\n        \"date\": \"18.09.2021 19:00\",\r\n        \"cost\": 150\r\n       },\r\n       {\r\n           \"id\": 6,\r\n        \"userID\": 2,\r\n        \"categoryID\": 6,\r\n        \"date\": \"11.09.2022 12:51\",\r\n        \"cost\": 150\r\n       }\r\n   ]\r\n}    ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LokalURL}}/record",
+							"host": [
+								"{{LokalURL}}"
+							],
+							"path": [
+								"record"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

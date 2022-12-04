@@ -1,0 +1,18 @@
+name: Deploy
+
+on:
+ push:
+   branches:
+     - main
+
+jobs:
+ build:
+   runs-on: ubuntu-latest
+   steps:
+     - uses: actions/checkout@v2
+     - uses: akhileshns/heroku-deploy@v3.12.12
+       with:
+         heroku_api_key: 533f84e1-8fe0-448f-8b1e-ff9363ddd3d9
+         heroku_app_name: "heroku1backapp"
+         heroku_email: "voznyakson@gmail.com"
+         usedocker: true
